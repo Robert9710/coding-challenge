@@ -34,9 +34,12 @@ namespace SurveyShips
             string shipCoords, instrs;
             int i = 0;
 
+            IList<KeyValuePair<int, int>> lostShips = new List<KeyValuePair<int, int>>();
+
             //Move ships
             for(int j=0; j<ships.Count; j += 2)
             {
+                bool lost = false;
                 shipCoords = ships[j];
                 instrs = ships[j + 1];
                 shipLoc = shipCoords.Split(" ");
@@ -68,18 +71,42 @@ namespace SurveyShips
                     {
                         if (i == 0)
                         {
+                            if(shipY + 1 > dimensionY)
+                            {
+                                Console.WriteLine(shipX + " " + shipY + " " + cardPoints[i] + " LOST");
+                                lost = true;
+                                break;
+                            }
                             shipY += 1;
                         }
                         else if(i == 1)
                         {
+                            if (shipX + 1 > dimensionX)
+                            {
+                                Console.WriteLine(shipX + " " + shipY + " " + cardPoints[i] + " LOST");
+                                lost = true;
+                                break;
+                            }
                             shipX += 1;
                         }
                         else if (i == 2)
                         {
+                            if (shipY - 1 < 0)
+                            {
+                                Console.WriteLine(shipX + " " + shipY + " " + cardPoints[i] + " LOST");
+                                lost = true;
+                                break;
+                            }
                             shipY -= 1;
                         }
                         else if (i == 3)
                         {
+                            if (shipX - 1 < 0)
+                            {
+                                Console.WriteLine(shipX + " " + shipY + " " + cardPoints[i] + " LOST");
+                                lost = true;
+                                break;
+                            }
                             shipX -= 1;
                         }
                     }
@@ -106,7 +133,16 @@ namespace SurveyShips
                         }
                     }
                 }
+                if (!lost)
+                {
+                    Console.WriteLine(shipX + " " + shipY + " " + cardPoints[i]);
+                }
             }
+        }
+
+        static bool contains(IList<int> l)
+        {
+            return true;
         }
     }
 }
