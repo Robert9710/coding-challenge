@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\SurveyShips\SurveyShips\bin\Debug\netcoreapp2.1\SurveyShips.deps.json
+C:\Users\User\source\repos\SurveyShips\SurveyShips\bin\Debug\netcoreapp2.1\SurveyShips.runtimeconfig.json
+C:\Users\User\source\repos\SurveyShips\SurveyShips\bin\Debug\netcoreapp2.1\SurveyShips.runtimeconfig.dev.json
+C:\Users\User\source\repos\SurveyShips\SurveyShips\bin\Debug\netcoreapp2.1\SurveyShips.dll
+C:\Users\User\source\repos\SurveyShips\SurveyShips\bin\Debug\netcoreapp2.1\SurveyShips.pdb
+C:\Users\User\source\repos\SurveyShips\SurveyShips\obj\Debug\netcoreapp2.1\SurveyShips.csprojAssemblyReference.cache
+C:\Users\User\source\repos\SurveyShips\SurveyShips\obj\Debug\netcoreapp2.1\SurveyShips.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\SurveyShips\SurveyShips\obj\Debug\netcoreapp2.1\SurveyShips.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\SurveyShips\SurveyShips\obj\Debug\netcoreapp2.1\SurveyShips.AssemblyInfo.cs
+C:\Users\User\source\repos\SurveyShips\SurveyShips\obj\Debug\netcoreapp2.1\SurveyShips.dll
+C:\Users\User\source\repos\SurveyShips\SurveyShips\obj\Debug\netcoreapp2.1\SurveyShips.pdb
