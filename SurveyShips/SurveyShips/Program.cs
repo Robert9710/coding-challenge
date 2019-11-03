@@ -8,6 +8,7 @@ namespace SurveyShips
         static void Main(string[] args)
         {
             IList<string> ships = new List<string>();
+            /*
             string gridSize, shipInfo;
 
             //Get user input
@@ -24,6 +25,16 @@ namespace SurveyShips
             //Format user input
             int.TryParse(gridSize.Split(" ")[0], out int dimensionX);
             int.TryParse(gridSize.Split(" ")[1], out int dimensionY);
+            */
+
+            int dimensionX = 5, dimensionY = 3;
+            ships.Add("1 1 E");
+            ships.Add("RFRFRFRF");
+            ships.Add("3 2 N");
+            ships.Add("FRRFLLFFRRFLL");
+            ships.Add("0 3 W");
+            ships.Add("LLFFFLFLFL");
+            
 
             //Array with cardinal points
             string[] cardPoints = {"N", "E", "S", "W"};
@@ -66,6 +77,7 @@ namespace SurveyShips
                         break;
                 }
 
+                //Execute instructions
                 foreach(char instr in instrs)
                 {
                     shipXY = new KeyValuePair<int, int>(shipX, shipY);
@@ -75,7 +87,6 @@ namespace SurveyShips
                         {
                             if(shipY + 1 > dimensionY)
                             {
-                                
                                 if (lostShips.Contains(shipXY))
                                 {
                                     continue;
@@ -145,6 +156,7 @@ namespace SurveyShips
                             shipX -= 1;
                         }
                     }
+                    //Update i to indicate current ship orientation
                     else if(instr == 'L')
                     {
                         if(i - 1 < 0)
