@@ -7,7 +7,7 @@ namespace SurveyShips
     {
         static void Main(string[] args)
         {
-            IList<string> shipsInfo = new List<string>();
+            IList<string> ships = new List<string>();
             string gridSize, shipInfo;
 
             //Get user input
@@ -17,13 +17,32 @@ namespace SurveyShips
             shipInfo = Console.ReadLine();
             while (!shipInfo.Equals(""))
             {
-                shipsInfo.Add(shipInfo);
+                ships.Add(shipInfo);
                 shipInfo = Console.ReadLine();
             }
 
             //Format user input
             int.TryParse(gridSize.Split(" ")[0], out int dimensionX);
             int.TryParse(gridSize.Split(" ")[1], out int dimensionY);
+
+            //Array with cardinal points
+            string[] cardPoints = {"N", "W", "S", "E"};
+
+            //Array to store location for each ship
+            string[] shipLoc;
+
+            string shipCoords, instructions;
+
+            //Move ships
+            for(int i=0; i<ships.Count; i += 2)
+            {
+                shipCoords = ships[i];
+                instructions = ships[i + 1];
+                shipLoc = shipCoords.Split(" ");
+                int.TryParse(shipLoc[0], out int shipX);
+                int.TryParse(shipLoc[1], out int shipY);
+                int.TryParse(shipLoc[2], out int shipOrientation);
+            }
         }
     }
 }
